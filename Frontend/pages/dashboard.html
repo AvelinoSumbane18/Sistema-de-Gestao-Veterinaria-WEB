@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard|VETSIS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/tailwind.css">
+  </head>
+  <body>
+    <div class="grid gap grid-cols-[250px_1fr] grid-rows-[50px_1fr] h-dvh">
+      <aside class="row-span-full grid justify-items-center grid-rows-[auto_1fr_auto] py-4 gap-2">
+        <div>
+          <img src="../Assets/logo/logo-sem fundo.png" alt="Logo VETSIS" />
+        </div>
+        
+
+        <ul class="grid w-full">
+          <li class=" bg-red-500">
+            <a href="dashboard.html" class="flex gap-2 ">
+              <i class="bi bi-grid-fill"></i> DashBoard</a
+            >
+          </li>
+          <li class="p-2 bg-red-500 ">
+            <a href="dashboard.html" class="flex gap-2">
+              <img width="20" height="20" src="../Assets/icons/pawprint.png" alt=""></i> Animais</a
+            >
+          </li>
+          <li class="p-2 bg-red-500 ">
+            <a href="dashboard.html" class="flex gap-2">
+            <img width="20" height="20" src="../Assets/icons/doctor.png" alt="Veterinário"></i> Veterinários</a
+            >
+          </li>
+          <li class="p-2 bg-red-500 ">
+            <a href="dashboard.html" class="flex gap-2">
+              <img width="20" height="20" src="../Assets/icons/doctor-bag.png" alt="Consultas"> Consultas</a
+            >
+          </li>
+          <li class="p-2 bg-red-500  ">
+            <a href="dashboard.html" class="flex gap-2">
+             <img width="20" height="20" src="../Assets/icons/credit-card.png" alt="Pagamentos"> Pagamentos</a
+            >
+          </li>
+          <li class="p-2 bg-red-500 ">
+            <a href="dashboard.html" class="flex gap-2">
+           <img width="20" height="20" src="../Assets/icons/report.png" alt="Relatório"> Relatórios</a
+            >
+          </li>
+          <li class="p-2 bg-red-500 w-full">
+            <a href="dashboard.html" class="flex gap-2 w-full">
+              <i class="bi bi-person-fill"></i> Usuários</a
+            >
+          </li>
+        </ul>
+        
+
+        <button class="text-white bg-green-600 w-48 p-2 "> <i class="bi bi-box-arrow-left "></i> Sair</button>
+      </aside>
+      <header class="bg-green-700 col-start-2 flex justify-between items-center px-4">
+        <p class="text-white text-2xl font-bold">Segunda Feira, Dia: 29 de Maio de 2026</p>
+        <div>
+
+        <img width="30px" height="30px" src="../Assets/Perfil/profile-icon.png" alt="Meu Perfil">
+        </div>
+
+      </header>
+      <main class="bg-gray-200 col-start-2 px-10 py-4">
+        <section class="flex gap-12 flex-wrap">
+          <div class="bg-white rounded-sm w-48 h-24 flex justify-between flex-col p-2">
+            <h1 class="text-lg font-bold">Veterinário</h1>
+            <span class="self-end text-2xl text-green-700">2</span>
+          </div>
+          <div class="bg-white rounded-sm w-48 h-24 flex justify-between flex-col p-2">
+            <h1 class="text-lg font-bold">Animais</h1>
+            <span class="self-end text-2xl text-green-700">5</span>
+          </div>
+          <div class="bg-white rounded-sm w-48 h-24 flex justify-between flex-col p-2">
+            <h1 class="text-lg font-bold">Usuários</h1>
+            <span class="self-end text-2xl text-green-700">3</span>
+          </div>
+          <div class="bg-white rounded-sm w-48 h-24 flex justify-between flex-col p-2">
+            <h1 class="text-lg font-bold">Consultas</h1>
+            <span class="self-end text-2xl text-green-700">10/50</span>
+          </div>
+        </section>
+        <section>
+          <div class="flex justify-between items-center">
+            <h1 class="font-bold text-lg">Consultas Recentes</h1>
+            <div class="flex gap-6 max-[14]:">
+                <select name="consultaFiltro" id="consultaFiltro" class="px-2 rounded-sm bg-white border border-black">
+                  <option value="preco">Preco</option>
+                  <option value="tipo">Tipo</option>
+                  <option value="animal">Animal</option>
+                </select>
+                <div>
+                <input type="text" placeholder="Pesquise a consulta">
+                  <i class="bi bi-search"></i>
+                </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
