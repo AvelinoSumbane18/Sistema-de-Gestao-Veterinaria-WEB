@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard|VETSIS</title>
+    <title>Usuários|VETSIS</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
@@ -50,7 +50,7 @@
             >
           </li>
           <li class="p-2  ">
-            <a href="usuarios.html" class="flex gap-2 w-full">
+            <a href="dashboard.html" class="flex gap-2 w-full">
               <i class="bi bi-person-fill"></i> Usuários</a
             >
           </li>
@@ -68,39 +68,24 @@
 
       </header>
       <main class="bg-gray-200 col-start-2 px-10 py-4">
-        <section class="flex gap-12 ">
-          <div class="bg-white rounded-sm w-1/2 h-32 flex justify-between flex-col p-2">
-            <h1 class="text-lg font-bold">Veterinário</h1>
-            <span class="self-end text-3xl text-green-700">2</span>
-          </div>
-          <div class="bg-white rounded-sm w-1/2 h-32 flex justify-between flex-col p-2">
-            <h1 class="text-lg font-bold">Animais</h1>
-            <span class="self-end text-3xl text-green-700">5</span>
-          </div>
-          <div class="bg-white rounded-sm w-1/2 h-32 flex justify-between flex-col p-2">
-            <h1 class="text-lg font-bold">Usuários</h1>
-            <span class="self-end text-3xl text-green-700">3</span>
-          </div>
-          <div class="bg-white rounded-sm w-1/2 h-32 flex justify-between flex-col p-2">
-            <h1 class="text-lg font-bold">Consultas</h1>
-            <span class="self-end text-3xl text-green-700">10/50</sp100
-          </div>
-        </section>
-        <section class="mt-4">
-          <div class="flex justify-between items-center">
-            <h1 class="font-bold text-lg">Consultas Recentes</h1>
-            <div class="flex gap-6 max-[14]:">
-            <select name="consultaFiltro" id="consultaFiltro" class="px-2 rounded-sm bg-white border border-black">
-                  <option value="preco">Preco</option>
-                  <option value="tipo">Tipo</option>
-                  <option value="animal">Animal</option>
-                </select>
-                <div>
-                <input type="text" placeholder="Pesquise a consulta">
-                  <i class="bi bi-search"></i>
-                </div>
+        <section class=" grid">
+          
+            
+                 <button class="bg-white  rounded-2xl p-2 cursor-pointer"> <i class="bi bi-plus"></i> Adicionar Usuários</button>
+          <div class="flex justify-between items-center mt-4">
+            <h1 class="font-bold text-lg">Lista de Usuários</h1>
+            <div class="flex gap-2">
+
+            <select name="animal-filtro" id="animal-filtro" class="bg-white p-2 rounded-2xl w-48 cursor-pointer">
+              <option value="tipo">Tipo</option>
+              <option value="tipo">Tipo</option>
+              <option value="preco">Preco</option>
+            </select>
+            <input type="text" placeholder="Pesquise o Usuário" class="bg-white p-2 rounded-2xl cursor-pointer">
             </div>
+
           </div>
+       
         </section>
       </main>
     </div>
