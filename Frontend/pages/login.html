@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login|VETSIS</title>
+  </head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="../css/tailwind.css" />
+<link rel="stylesheet" href="../css/validacoes.css">  
+
+  <body >
+    <main class="grid justify-center items-stretch content-end  w-full h-full ">
+      <div class="grid grid-cols-2 h-full border-2 p-4">
+        <div class="items-center">
+          <img src="../Assets/logo/logo-sem fundo.png" alt="Logo-Vetsis"  width="400px" height="400px"/>
+        </div>
+        <form action="">
+          <h1 class="text-center text-green-700 text-2xl font-bold mt-4">Login</h1>
+          <div class="mt-36 px-4">
+            <div class=" relative ">
+
+              <i class="bi bi-person absolute left-2 top-1/2 -translate-y-1/2 text-gr"></i>
+              <input
+                type="text"
+                name="usuario"
+                id="usuario"
+                placeholder="Nome do Usúario"
+                class="w-full h-8 pl-8 shadow-sm focus:shadow-md border-2 border-green-300  "
+              />
+  
+            </div>
+            <span class="erro-message text-sm text-red-500"> <i class="bi bi-exclamation-circle-fill"></i> Precisa </span>
+            <div class="relative">
+              <i class="bi bi-lock absolute left-2 top-1/2 -translate-y-1/2"></i>
+              <input
+                type="password"
+                name="senha"
+                id="senha"
+                placeholder="Senha"
+                class="w-full h-8 pl-8 shadow-sm focus:shadow-md  border-2 border-green-300"
+              />
+    
+            </div>
+            <span class="erro-message text-sm text-red-500"> <i class="bi bi-exclamation-circle-fill"></i></span>
+      
+             <button id="btnEntrar"
+            class="text-white text-center w-full h-8 bg-green-700 mt-4 cursor-pointer "
+          >
+            Entrar
+          </button>
+          </div>
+
+        </form>
+      </div>
+    </main>
+    
+  </body>
+  <script type="module" src="../js/script.js"></script>
+</html>

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/tailwind.css">
   </head>
   <body>
-    <div class="grid gap grid-cols-[250px_1fr] grid-rows-[50px_1fr] h-dvh">
+    <div class="grid gap grid-cols-[250px_1fr] grid-rows-[50px_1fr] h-dvh relative">
       <aside class="row-span-full grid justify-items-center grid-rows-[auto_1fr_auto] py-4 gap-2">
         <div>
           <img src="../Assets/logo/logo-sem fundo.png" alt="Logo VETSIS" />
@@ -88,8 +88,17 @@
        
         </section>
       </main>
-      <section>
-        
+      <section class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%]  bg-white ">
+        <h1>Adicionar novo animal</h1>
+
+        <form action="">
+          <div>
+            <div>
+              <label for="C-Animal" class="text-sm block">Codigo do Animal</label>
+              <input id="C-Animal" name="C-Animal" type="text" placeholder="CAO123"  class="border-2  rounded-2xl border-green-200 bg-white text-gray-300  text-md px-2">
+            </div>
+          </div>
+        </form>
       </section>
     </div>
   </body>
