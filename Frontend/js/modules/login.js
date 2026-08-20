@@ -1,3 +1,6 @@
+import fetchAnimais from "./fetchUsuarios.js";
+const urlApi =
+  "http://127.0.0.1:5500/Sistema-de-Gestao-Veterinaria-WEB/Frontend/usuariosapi.json";
 export default class Login {
   constructor(usuario, senha, btnEntrar) {
     this.usuario = document.querySelector(usuario);
@@ -5,6 +8,7 @@ export default class Login {
     this.btnEntrar = document.querySelector(btnEntrar);
     this.erroName = document.querySelector(".erro-name");
     this.erroSenha = document.querySelector(".erro-senha");
+    this.init();
   }
   validacaoCampos() {
     const nome = this.usuario.value;
@@ -31,27 +35,27 @@ export default class Login {
       this.autenticacaoUser(nome, senha);
     }
   }
-  async carregarUsuarios() {
-    try {
-      const respose = await fetch(
-        "http://127.0.0.1:5500/Sistema-de-Gestao-Veterinaria-WEB/Frontend/usuariosapi.json",
-      );
-      const resposeJson = await respose.json();
+  // async carregarUsuarios() {
+  //   try {
+  //     const respose = await fetch(
+  //       "http://127.0.0.1:5500/Sistema-de-Gestao-Veterinaria-WEB/Frontend/usuariosapi.json",
+  //     );
+  //     const resposeJson = await respose.json();
 
-      return resposeJson;
-    } catch (erro) {
-      console.log("Erro " + erro);
-      return null;
-    }
-  }
+  //     return resposeJson;
+  //   } catch (erro) {
+  //     console.log("Erro " + erro);
+  //     return null;
+  //   }
+  // }
 
   async autenticacaoUser(nome, senha) {
-    const usuario = await this.carregarUsuarios();
+    const usuario = await fetchAnimais(urlApi);
 
     const existe = usuario.some((u) => u.nome == nome && u.senha == senha);
-    const url = window.location;
     const urlDashBoard =
       "http://127.0.0.1:5500/Sistema-de-Gestao-Veterinaria-WEB/Frontend/pages/dashboard.html";
+
     if (existe) {
       alert("Usuario Encontrado");
       this.limparCampos();
@@ -82,8 +86,13 @@ export default class Login {
     this.addEventLogin = this.addEventLogin.bind(this);
   }
   init() {
-    this.bindEvents();
-    this.btnEntrar.addEventListener("click", this.addEventLogin);
+    if (this.usuario && this.senha && this.btnEntrar) {
+      this.bindEvents();
+      this.btnEntrar.addEventListener("click", this.addEventLogin);
+    }else{
+      console.log("Os elementos da Tela de login nao foram encontrados")
+    }
+
     return this;
   }
 }
